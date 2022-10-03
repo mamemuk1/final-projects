@@ -2,12 +2,12 @@
 #include "Linked.cpp"
 using namespace std;
 
-struct dictionary{
+/*struct dictionary{
 	char word[50];
 	char pron[60]; //pronunciation
 	char type[4];
 	char meaning[200];
-};
+};*/
 
 /*template <class T>
 struct nodeList{ //you can add constructor here
@@ -65,12 +65,20 @@ AVL<T>::AVL(){
 }
 template <class T>
 AVL<T>::AVL(AVL<T> & avl){
-	
+	/*if(avl.root==NULL)
+	{
+		root=NULL;
+	}
+	else
+	{
+		avlNode<T> temp1=avl.root;
+		
+	}*/
 }
 
 template <class T>
 AVL<T>::~AVL(){
-	
+	/*root=*/makeEmpty(root);
 }
 
 template <class T>
@@ -160,9 +168,9 @@ avlNode<T> * AVL<T>::doubleLeftRotate(avlNode<T> * n){
 }
 template <class T>
 avlNode<T> * AVL<T>::getBalance(avlNode<T> *n){
-	if(n==NULL)
-		return 0;
-	//return height(n->left) - height(n->right);
+	/*if(n==NULL)
+		return 0;*/
+	return height(n->left) - height(n->right);
 }
 template <class T>
 avlNode<T> * AVL<T>::insert(T data, avlNode<T> * avlRoot){
